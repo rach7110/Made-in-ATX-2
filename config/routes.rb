@@ -1,6 +1,8 @@
 MadeInAtx2::Application.routes.draw do
+  
+  root to: 'companies#index'
 
-  get 'companies#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
