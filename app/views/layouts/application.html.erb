@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MadeInAtx2</title>
+<link href='http://fonts.googleapis.com/css?family=Nosifer|Cabin+Condensed|Londrina+Sketch|Frijole|Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <title>
+  	<%= page_title(@company) %>
+  </title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-
-<!-- <img src = "/dropbox/Rachel_documents/other/makersquare/code/made-in-atx-2/app/assets/background/tweed/tweed.png" alt="background"> -->
-<!-- <img src = "assets/rails.png" alt="background"> -->
+<h1>Made.In.ATX</h1>
 <%= yield %>
 
 </body>

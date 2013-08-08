@@ -11,6 +11,14 @@
  *= require_self
  *= require_tree .
  */
+h1 {
+	/*font-family: 'Nosifer', cursive;*/
+	/*font-family: 'Cabin Condensed', sans-serif;*/
+	/*font-family: 'Londrina Sketch', cursive;*/
+	/*font-family: 'Frijole', cursive;*/
+	font-family: 'Source Code Pro', sans-serif;
+}
+
 body { 
 	background-image: url(/assets/background/binding_light/binding_light.png);
 /*	background-image: url(/assets/background/mochaGrunge/mochaGrunge.png);
