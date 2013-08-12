@@ -1,0 +1,9 @@
+= link_to "New Company", new_company_path
+%br
+
+%p Rock on!
+%br
+
+- @companies.each do |x|
+	%p= link_to x.name, x.name
+	%br
