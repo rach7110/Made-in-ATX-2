@@ -2,6 +2,8 @@ MadeInAtx2::Application.routes.draw do
   
   root to: 'companies#index'
 
+  resources :companies
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
