@@ -1,7 +1,10 @@
 == Description
-This is a remake of an earlier app called Made-in-ATX, which lists technology companies in Ausitn, TX. This version has less rails config's (ie: no composer gem setup; no forms; no user authentication). It also incorporates some javascript and jquery code that will allow the site visitor to see additional company information when the mouse hovers over the company name. The company info will append to div that expands and pops out of the page like a 3D object. Extensions will include having a Join function and an option to change the layout view form a list of companies to a map version with filters. 
+This is a remake of an earlier app called Made-in-ATX, which lists technology companies in Ausitn, TX. This version has less rails config's (ie: no composer gem setup; no forms; no user authentication). It also incorporates some javascript and jquery code that will allow the site visitor to see additional company information when the mouse hovers over the company name. This company info will append to a div that expands and pops out of the page like a 3D object. 
 
-Please see the issues list for progress and additional functionality details. 
+==Extensions 
+Will include having a 'Join' function so companies can sign up to add their information to the site; an option to change the layout view form a list of companies to a map version with filters. 
+
+Please see the Issues list for progress and additional functionality details. 
 
 -R Loziuk (8/11/13)
 
