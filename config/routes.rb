@@ -3,7 +3,7 @@ MadeInAtx2::Application.routes.draw do
   root to: 'companies#index', as: 'home'
 
   resources :companies
-  post '/companies' => 'companies#create', as: 'new_company'
+  get '/company/new' => 'companies#new', as: 'new_company'
 
 
   # The priority is based upon order of creation:
