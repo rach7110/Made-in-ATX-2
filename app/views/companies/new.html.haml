@@ -33,6 +33,6 @@
 		= l.label :description, "Description: add 1-3 sentence description"
 		%br
 	.field
-		= l.text_field :description
+		= l.text_area :description, :cols => "60", :rows => "10"
 
 	.actions= l.submit "Submit"

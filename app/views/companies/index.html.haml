@@ -1,7 +1,7 @@
-= link_to "New Company", new_company_path
-%br
-%br
-
+%a{:href => 'companies/new', :class => 'button'}
+	%img{:src=> 'assets/button-new.png'}
+	%br
+/ = link_to "New Company", new_company_path
 - @companies.each do |x|
-	%p= link_to x.name, x.website, :target => "_blank"
+	%p= link_to x.name, x.website, :target => "_blank" 
 	%br
