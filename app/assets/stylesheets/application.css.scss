@@ -19,9 +19,13 @@
 	font-family: 'Georgia', sans-serif;
 }
 
-/* ---------------Error messages ---------- */
+/* ---------------Error/Notice messages ---------- */
 .error {
 	color: red;
+}
+
+.notice { 
+	color: blue;
 }
 
 /* -------------- Body ------------------- */

@@ -14,7 +14,7 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(params[:company])
     if @company.save
-    	redirect_to home_path, notice: "Link added successfully"
+    	redirect_to company_path(@company.id), notice: "Company added successfully"
  	  else
  	  	render action: 'new'
  	  end
@@ -25,11 +25,20 @@ class CompaniesController < ApplicationController
   end
 
   def update
-
+    @company = Company.find(params[:id])
+    
+    if @company.update_attributes(params[:company])
+      redirect_to company_path(@company.id), notice: "Company was updated succesfully"
+    else
+      render 'edit_company' 
+    end 
   end
 
   def destroy
-
+    @company = Company.find(params[:id])
+    @company.destroy
+    
+    redirect_to companies_path 
   end
 
 

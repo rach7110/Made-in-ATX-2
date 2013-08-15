@@ -8,6 +8,8 @@ gem 'haml'
 
 gem 'sqlite3'
 
+gem 'debugger'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
