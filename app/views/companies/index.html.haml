@@ -1,7 +1,16 @@
+/ ------This view is for the Homepage index --------
+
+/ -------- Button to add a company --------
+/ = link_to "New Company", new_company_path
 %a{:href => 'companies/new', :class => 'button'}
 	%img{:src=> 'assets/button-new.png'}
-	%br
-/ = link_to "New Company", new_company_path
-- @companies.each do |x|
-	%p= link_to x.name, x.website, :target => "_blank" 
-	%br
+
+/  ---------  Listing companies ---------
+%table
+	%tr
+		%th="Company"
+	- @companies.each do |x|
+		%tr
+			%td= link_to x.name, x.website, :target => "_blank"
+			/ %td= link_to 'Show', company_show_path(x.id)
+			/ %td= link_to 'Edit', company_edit_path(x.id)
