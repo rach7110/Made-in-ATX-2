@@ -1,0 +1,47 @@
+%h1 Edit a Company
+%br
+
+= form_for(@company) do |form|
+	- if @company.errors.any?
+		%h2= pluralize(@company.errors.count, "error") + "prohibited this link from being saved:"
+		%ul
+			- @company.errors.full_messages.each do |msg|
+				%li= msg
+
+	.field
+		= form.label :name
+		%br
+	.field
+		= form.text_field :name
+		%br
+		%br
+
+	.field
+		= form.label :address1, "Address"
+		%br
+	.field
+		= form.text_field :address1
+		%br
+		%br
+
+	.field
+		= form.label :website
+		%br
+	.field
+		= form.text_field :website
+		%br
+		%br
+
+	.field
+		= form.label :description
+		%br
+	.field
+		= form.text_area :description, :cols => "60", :rows => "10"
+		%br
+		%br
+	.actions
+		= form.submit "Update"
+	%br
+	.actions
+		= link_to 'Cancel', company_path
+

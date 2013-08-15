@@ -18,6 +18,12 @@
 	margin: 0px;
 	font-family: 'Georgia', sans-serif;
 }
+
+/* ---------------Error messages ---------- */
+.error {
+	color: red;
+}
+
 /* -------------- Body ------------------- */
 body { 
 	background-image: url(/assets/background/binding_light/binding_light.png);
@@ -38,6 +44,12 @@ header {
 }
 header h1{
 	margin-bottom: 8px;
+}
+
+/* Turns of link decoration for 'Made.In.ATX'*/
+.mia {
+	text-decoration: none;
+	color: inherit;
 }
 
 nav {
@@ -62,3 +74,4 @@ table {
 	border: dotted black 1px;
 	margin: auto;
 }
+

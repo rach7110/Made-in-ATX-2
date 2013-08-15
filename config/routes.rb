@@ -1,8 +1,27 @@
 MadeInAtx2::Application.routes.draw do
   
   root to: 'companies#index', as: 'home'
+  # Route created by 'root to:' :
+  # home        /                             companies#index
 
   resources :companies
+
+# routes creaed by 'resrouces':
+#   companies GET    /companies(.:format)          companies#index
+#              POST   /companies(.:format)          companies#create
+#  new_company GET    /companies/new(.:format)      companies#new
+# edit_company GET    /companies/:id/edit(.:format) companies#edit
+#      company GET    /companies/:id(.:format)      companies#show
+#              PUT    /companies/:id(.:format)      companies#update
+#              DELETE /companies/:id(.:format)      companies#destroy
+
+# Representational State Transfer (RESTful) 'request methods':
+  # get
+  # post
+  # put
+  # delete
+  # patch ?
+
 
 
   # The priority is based upon order of creation:
