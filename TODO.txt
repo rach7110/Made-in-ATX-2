@@ -2,14 +2,22 @@ TODO:
 
 Javascript:
 	pop off page
-	expand div to show more company info
-Wireframe of company page: 1) default and 2) customizable(paid)
+	add lazyload
 
-Use a RD front-end frameowrk; like Foundation
-Add category tags/filters
+Wireframes: 
+	howpage
+	company page - default 
+	company page -  customizable (paid)
+
+	Company page
+		default: screen shot
+		paid: 
+
 User login
-LImiting the description text-field size (read more link)
 
-Company page
-default: screen shot
-paid: profile page - customizable
+Use a RD front-end framework; like Foundation
+Add category tags/filters
+
+Nitpicky:
+	Limiting the description text-field size (read more link)
+
