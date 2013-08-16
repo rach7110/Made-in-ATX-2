@@ -44,7 +44,7 @@ header {
 	text-align: center;
 	vertical-align: bottom;
 
-	border: 1px black dashed;
+	/*border: 1px black dashed;*/
 }
 header h1{
 	margin-bottom: 8px;
@@ -52,30 +52,21 @@ header h1{
 
 /* Turns of link decoration for 'Made.In.ATX'*/
 .mia {
-	text-decoration: none;
 	color: inherit;
+	text-decoration: none;
 }
 
 nav {
-	border: 1px black dashed;
-	padding: 10px 0px 15px 0px;
+	padding: 0px 0px 15px 0px;
+
+	/*border: 1px black dashed;*/
 }
 
 .tagline {
 	font-size: 24px;
 	text-align: center;
 
-	border: 1px black dotted;
+	/*border: 1px black dotted;*/
 }
 
-/* -------------- Button ------------------- */
-.button{
-	 
-}
-
-/* ----------------Table ------------------- */
-table {
-	border: dotted black 1px;
-	margin: auto;
-}
 

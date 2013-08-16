@@ -1,0 +1,15 @@
+TODO:
+
+Javascript:
+	pop off page
+	expand div to show more company info
+Wireframe of company page: 1) default and 2) customizable(paid)
+
+Use a RD front-end frameowrk; like Foundation
+Add category tags/filters
+User login
+LImiting the description text-field size (read more link)
+
+Company page
+default: screen shot
+paid: profile page - customizable
