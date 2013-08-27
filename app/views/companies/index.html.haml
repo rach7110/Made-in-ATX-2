@@ -8,6 +8,12 @@
 	%a{:href => 'companies/new', :class => 'button'}
 		%img{:src=> 'assets/button-new.png'}
 
+
+- @categories_array.each do |company|
+	.company
+		.title
+			%h3= company	
+
 /  ---------  LISTING Companies ---------
 - @companies.each do |x|
 	.company
