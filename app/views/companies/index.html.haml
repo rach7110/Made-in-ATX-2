@@ -9,26 +9,25 @@
 		%img{:src=> 'assets/button-new.png'}
 
 
-/ = @results["results"][0]["name"]
-- @crunchbase_companies.each do |company|
-	= link_to company["name"], "http://google.com"
-	%br
+/ - @crunchbase_companies.each do |company|
+/ 	= link_to company["name"], "http://google.com"
+/ 	%br
 
 /  ---------  LISTING Companies ---------
-- @companies.each do |x|
+- @crunchbase_companies.each do |crunchbase_company|
 	.company
 		.title
-			%h3= link_to x.name, x.website, :target => "_blank"
+			%h3= link_to crunchbase_company["name"], "http://google.com"
 		.block
 			.logo
-				= image_tag 'http://placehold.it/125x75'
+				= image_tag "http://www.crunchbase.com/company/#{crunchbase_company['name']}/#{crunchbase_company['image']}"
 			.info
-				%p= x.description
+				%p= "Category: #{crunchbase_company['category_code']}"
+				%p= "Website: #{crunchbase_company['homepage_url']}"
+				
+
 				%br
-				.actions
-					= link_to 'Show', company_path(x)
-					= link_to 'Edit', edit_company_path(x)
-					= link_to 'Delete', x, :confirm => 'Are you sure?', :method => :delete
+
 
 / linh_to helper in html syntax: 
 / <a href="/company/4" data-confirm="Are you sure?" data-method="delete">Delete</a> 
