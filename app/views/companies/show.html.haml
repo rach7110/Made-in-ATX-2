@@ -15,6 +15,13 @@
 
 .notice
 	= flash[:notice]
+%h1 
+	=@company.name
+	- if @company.name == "Design for Use"
+		%br
+		%br
+		%h2{ :style => "color: orange" }
+			Hi Valle!
 
 %br
 .actions
