@@ -9,10 +9,10 @@
 		%img{:src=> 'assets/button-new.png'}
 
 
-- @categories_array.each do |company|
-	.company
-		.title
-			%h3= company	
+/ = @results["results"][0]["name"]
+- @crunchbase_companies.each do |company|
+	= link_to company["name"], "http://google.com"
+	%br
 
 /  ---------  LISTING Companies ---------
 - @companies.each do |x|
