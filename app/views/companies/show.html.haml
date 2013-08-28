@@ -15,7 +15,18 @@
 
 .notice
 	= flash[:notice]
+%h1 
+	=@company.name
+	- if @company.name == "Design for Use"
+		%br
+		%br
+		%h2{ :style => "color: orange" }
+			Hi Valle!
+			%br
+			%br
+		= image_tag("hamster-in-a-tennis-ball.jpg")	
 
+%br
 %br
 .actions
 	= link_to 'Back to List', companies_path
