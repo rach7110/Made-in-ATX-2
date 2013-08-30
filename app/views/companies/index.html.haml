@@ -14,6 +14,9 @@
 / 	%br
 
 /  ---------  LISTING Companies ---------
+%p= "crunchbase_companies.class: #{@crunchbase_companies.class}"
+%p= "crunchbase_companies\[0\].class: #{@crunchbase_companies[0].class}"
+%p= "crunchbase_companies\[0\]: #{@crunchbase_companies[0]}"
 - @crunchbase_companies.each do |crunchbase_company|
 	.company
 		.title
@@ -23,7 +26,8 @@
 				= image_tag "http://www.crunchbase.com/company/#{crunchbase_company['name']}/#{crunchbase_company['image']}"
 			.info
 				%p= "Category: #{crunchbase_company['category_code']}"
-				%p= "Website: #{crunchbase_company['homepage_url']}"
+				%p= link_to 'Website', crunchbase_company['homepage_url']
+
 				
 
 				%br
