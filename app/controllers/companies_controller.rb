@@ -19,7 +19,8 @@ class CompaniesController < ApplicationController
   end
 
   def show
-    @company = Company.find(params[:id])
+    # @company = Company.find(params[:id])
+    json_file = JSON.parse(open("http://api.crunchbase.com/v/1/company/#{@name}.js"))
   end
 
   def new 
