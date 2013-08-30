@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  $('.block').hide();
+  // Hides the company info block to start:
+  // $('.block').hide();
 
   $('.company').mouseenter(function(){
     $(this).css("font-weight", "bold");
@@ -7,17 +8,17 @@ $(document).ready(function(){
     $(this).css("font-weight", "normal");
   });
 
-// / Hides-shows the company logo and info, called 'block' class, on mouse hover:
+// / Mouse hover: Hides-shows the company logo and info, called 'block' class
   // $('.title').click(function(){
   //   $(this).next().slideToggle();
   // });
 
-// Hides-shows the company logo and info, called 'block' class, on mouse enter and leave:
- $('.company').mouseenter(function(){
-    $(this).children().show('.block');
-  }).mouseleave(function(){
-    $('.block').hide();
-  });
+// Mouse enter/leave: Hides-shows the company logo and info, called 'block' class
+ // $('.company').mouseenter(function(){
+ //    $(this).children().show('.block');
+ //  }).mouseleave(function(){
+ //    $('.block').hide();
+ //  });
 
 });
 
