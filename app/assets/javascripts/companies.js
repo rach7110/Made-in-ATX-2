@@ -1,7 +1,8 @@
 $(document).ready(function(){
-  // Hides the company info block to start:
-  // $('.block').hide();
+  // Pageload: Hides the company info block to start
+  $('.block').hide();
 
+// Mouse hover: Bolds the info block
   $('.company').mouseenter(function(){
     $(this).css("font-weight", "bold");
   }).mouseleave(function(){
@@ -9,9 +10,9 @@ $(document).ready(function(){
   });
 
 // / Mouse hover: Hides-shows the company logo and info, called 'block' class
-  // $('.title').click(function(){
-  //   $(this).next().slideToggle();
-  // });
+  $('.title').click(function(){
+    $(this).next().slideToggle();
+  });
 
 // Mouse enter/leave: Hides-shows the company logo and info, called 'block' class
  // $('.company').mouseenter(function(){
