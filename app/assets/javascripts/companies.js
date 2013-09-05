@@ -9,17 +9,17 @@ $(document).ready(function(){
     $(this).css("font-weight", "normal");
   });
 
-// / Mouse hover: Hides-shows the company logo and info, called 'block' class
-  $('.title').click(function(){
-    $(this).next().slideToggle();
-  });
+// / Mouse click: Hides-shows the company logo and info, called 'block' class
+  // $('.title').click(function(){
+  //   $(this).next().slideToggle();
+  // });
 
 // Mouse enter/leave: Hides-shows the company logo and info, called 'block' class
- // $('.company').mouseenter(function(){
- //    $(this).children().show('.block');
- //  }).mouseleave(function(){
- //    $('.block').hide();
- //  });
+ $('.company').mouseenter(function(){
+    $(this).children().show('.block');
+  }).mouseleave(function(){
+    $('.block').hide();
+  });
 
 });
 
