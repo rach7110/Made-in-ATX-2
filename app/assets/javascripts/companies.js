@@ -3,11 +3,11 @@ $(document).ready(function(){
   $('.block').hide();
 
 // Mouse hover: Bolds the info block
-  $('.company').mouseenter(function(){
-    $(this).css("font-weight", "bold");
-  }).mouseleave(function(){
-    $(this).css("font-weight", "normal");
-  });
+  // $('.company').mouseenter(function(){
+  //   $(this).css("font-weight", "bold");
+  // }).mouseleave(function(){
+  //   $(this).css("font-weight", "normal");
+  // });
 
 // / Mouse click: Hides-shows the company logo and info, called 'block' class
   // $('.title').click(function(){
