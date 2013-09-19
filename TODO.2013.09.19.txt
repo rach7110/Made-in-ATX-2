@@ -10,5 +10,6 @@ X-Move object.class info to bottom of homepage
 -category and website on same line
 -view, edit, delete --> add to line below category and website
 - Description block --> add
-
 - Category - remove if null
+
+-Fix 'Add a Company' button > Controller error when adding new company.
