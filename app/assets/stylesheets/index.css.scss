@@ -2,11 +2,14 @@
 /* -------------- Button ------------------- */
 .button{
 	padding-top: 3px;
-	 margin: 15px;
+	margin: 15px;
+}
+.button img{
+	border-radius: 20px;
 }
 /* ------------- Company blocks --------- */
 .company {
-	border: 1px black dashed;
+/*	border: 1px black dashed;*/
 	overflow: auto;
 	padding: 5px;
 	overflow: hidden;
