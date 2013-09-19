@@ -1,19 +1,17 @@
 class CompaniesController < ApplicationController
   # Try Groupon API, Seek Geek API (Taylor/Josh did one), Good Reads API (MKS Challenge) - look at MKS students code for Biblio
-
   
-
   def index
   	@companies = Company.all
 
-    # Crunchbase API code - once it works, place it model for cleaner code
+    # Crunchbase API code - once it works, place it in model for cleaner code
     # require 'crunchbase' 
     require 'open-uri'
     require 'json'
 
-    json_file = JSON.parse(open("http://api.crunchbase.com/v/1/search.js?geo=78701&range=15&page=1&api_key=bxqwjskgyrg2hjykcrc6dbpy").read)
+    @json_file = JSON.parse(open("http://api.crunchbase.com/v/1/search.js?geo=78701&range=15&page=1&api_key=bxqwjskgyrg2hjykcrc6dbpy").read)
     # @results = json_file
-    @crunchbase_companies = json_file["results"]
+    @crunchbase_companies = @json_file["results"]
 
     # Crunchbase::API.key = "bxqwjskgyrg2hjykcrc6dbpy"
   end

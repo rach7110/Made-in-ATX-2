@@ -9,21 +9,7 @@
 		%img{:src=> 'assets/Button.13.Peter-c.jpg'}
 
 
-/ - @crunchbase_companies.each do |company|
-/ 	= link_to company["name"], "http://google.com"
-/ 	%br
-
-/  ---------  LISTING Companies ---------
-%p
-	crunchbase_companies.class: 
-	= @crunchbase_companies.class
-%p{:size => "6px"}
-	crunchbase_companies\[0\].class:
-	= @crunchbase_companies[0].class
-%p
-	crunchbase_companies\[0\]: 
-	= @crunchbase_companies[0]
-
+/  ---------  LISTING Companies from CrunchBase API ---------
 - @crunchbase_companies.each do |crunchbase_company|
 -  @crunchbase_company = crunchbase_company
 	.company
@@ -38,6 +24,23 @@
 				%p= link_to 'Website', crunchbase_company['homepage_url'], {:target => "_blank"}
 				%br
 
+/ ------- Inspecting Objects from CrunchBase API ------
+%b
+	crunchbase_companies.class: 
+%p
+	= @crunchbase_companies.class
+%b
+	crunchbase_companies[0].class:
+%p
+	= @crunchbase_companies[0].class
+%b
+	crunchbase_companies[0]: 
+%p
+	= @crunchbase_companies[0]
+%b
+	json_file.inspect:
+%p
+	= @json_file.inspect
 
 / linh_to helper in html syntax: 
 / <a href="/company/4" data-confirm="Are you sure?" data-method="delete">Delete</a> 
