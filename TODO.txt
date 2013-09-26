@@ -1,5 +1,7 @@
 TODO:
 
+-Authentication (see personas in Github)
+
 Javascript:
 	pop off page
 	add lazyload

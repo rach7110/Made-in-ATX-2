@@ -1,9 +1,11 @@
 Made.in.Atx
-TODo:
+Crunchbase Branch
+TODO:
 
 X-understand the ruby code for the API pull
 X-Move object.class info to bottom of homepage
 -add description or Overview
+-center append block
 -Pull all pages from API
 -fix logo pull request
 -Company name links to view page
