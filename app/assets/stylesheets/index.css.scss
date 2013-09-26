@@ -18,8 +18,30 @@
 
 .logo {
 	float: left;
+	width: 125px;
+	height: 150px;
+}
+.logo img {
+	margin: 0 auto;
 }
 
 .info {
+	position: relative;
 	margin-right: 125px;
 }
+
+.info p {
+	font-size: 12px;
+}
+
+.overview {
+	postion: relative;
+}
+
+.info2 {
+	position: absolute;
+	right: 0px;
+	font-size: 12px;
+	text-align: left;
+}
+

@@ -15,14 +15,21 @@
 	.company
 		.title
 			%h3
-				=link_to crunchbase_company["name"], 'companies/show[:id]'
+				=link_to crunchbase_company["name"], 'company_path(crunchbase_company)'
 		.block
 			.logo
 				= image_tag "http://www.crunchbase.com/company/#{crunchbase_company['name']}/#{crunchbase_company['image']}"
 			.info
-				%p= "Category: #{crunchbase_company['category_code']}"
-				%p= link_to 'Website', crunchbase_company['homepage_url'], {:target => "_blank"}
-				%br
+				.overview
+					= crunchbase_company['overview']
+				.info2
+					%p= link_to 'Website', crunchbase_company['homepage_url'], {:target => "_blank"}
+					%p= "Category: #{crunchbase_company['category_code']}"
+				%p
+					= link_to 'Edit', 'edit_company_path(crunchbase_company)'
+					= link_to 'Delete', crunchbase_company, :confirm => 'Are you sure?', :method => :delete
+
+			%br
 
 / ------- Inspecting Objects from CrunchBase API ------
 %b
