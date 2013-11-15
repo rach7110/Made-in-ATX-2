@@ -1,4 +1,6 @@
 TODO:
+- add API data to DB 
+- make a relational db
 
 -Authentication (see personas in Github)
 
