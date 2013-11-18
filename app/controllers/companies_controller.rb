@@ -10,18 +10,13 @@ class CompaniesController < ApplicationController
     require 'json'
 
     # Crunchbase::API.key = "bxqwjskgyrg2hjykcrc6dbpy"
-    @json_file = JSON.parse(open("http://api.crunchbase.com/v/1/search.js?geo=78701&range=15&page=1&api_key=bxqwjskgyrg2hjykcrc6dbpy").read)
-    @crunchbase_companies = @json_file["results"]
+    json_file = JSON.parse(open("http://api.crunchbase.com/v/1/search.js?geo=78701&range=15&page=1&api_key=bxqwjskgyrg2hjykcrc6dbpy").read)
+    @crunchbase_companies = json_file["results"]
 
     #Iterate through object and instantiate class Company to store into the DB:
-    @crunchbase_companies.each do |company|
-      @company = Company.new(params[:company])  
-    end
-
-    # Maybe?? Probably not:
-    # @company << company.name
-
-
+    @crunchbase_companies.each do |crunchbase_company|
+      @company = Company.new(params[:company])
+      @company.update_attributes(params[crunchbase_company])  
     end
   end
 
@@ -63,6 +58,5 @@ class CompaniesController < ApplicationController
     
     redirect_to companies_path 
   end
-
 
 end
