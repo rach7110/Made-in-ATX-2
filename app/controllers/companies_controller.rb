@@ -16,7 +16,7 @@ class CompaniesController < ApplicationController
     #Iterate through object and instantiate class Company to store into the DB:
     @crunchbase_companies.each do |crunchbase_company|
       @company = Company.new(params[:company])
-      @company.update_attributes(params[crunchbase_company])  
+      @company.update_attributes(:name => crunchbase_company["name"], :category_code => crunchbase_company["category_code"])  
     end
   end
 

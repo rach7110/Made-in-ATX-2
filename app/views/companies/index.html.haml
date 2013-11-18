@@ -3,11 +3,6 @@
 / ----------- TEXT to add a company --------
 / = link_to "New Company", new_company_path
 
-/ Test - display 
-/ %p
-/ 	@company(params[:company]):
-/ 	=@company(params[:company])
-
 / ----------- BUTTON to add a company --------
 .button
 	%a{:href => 'companies/new', :class => 'button'}
@@ -15,6 +10,14 @@
 
 
 /  ---------  LISTING Companies from CrunchBase API ---------
+
+%p
+	- @companies.each do |company|
+		.company
+			.title
+				%h3
+					=company.name
+					=company.category_code
 
 / If API data stored succesfully, should be able to use the link_to method to route to company view:
 / - @companies.each do |crunchbase_company|

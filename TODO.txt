@@ -9,6 +9,7 @@ X -center append block
 X -category and website in right corner
 X - edit, delete --> add to line below category and website
 - add API data to DB 
+- Pull all pages from API
 - Company name links to view page
 - Edit & delete links work
 -Fix 'Add a Company' button > Controller error when adding new company.
@@ -20,7 +21,7 @@ X - edit, delete --> add to line below category and website
 
 - make logo div heigh equal to Overview div height
 -fix logo pull request
--Pull all pages from API
+
 
 - Category - remove if null
 
