@@ -1,5 +1,5 @@
 class Company < ActiveRecord::Base
-  attr_accessible :name, :address1, :address2, :category, :description, :website
+  attr_accessible :name, :category_code, :homepage_url, :overview, :image
   # validates_presence_of :name
 end
 
