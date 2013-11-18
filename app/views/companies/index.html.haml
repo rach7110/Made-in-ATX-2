@@ -11,39 +11,26 @@
 
 /  ---------  LISTING Companies from CrunchBase API ---------
 
-%p
-	- @companies.each do |company|
-		.company
-			.title
-				%h3
-					=company.name
-					=company.category_code
 
-/ If API data stored succesfully, should be able to use the link_to method to route to company view:
-/ - @companies.each do |crunchbase_company|
-/ 	%h3
-/ 		=link_to crunchbase_company["name"], company_path(crunchbase_company.homepage_url)
 
-/ API data pulled directly, NOT stored in Database:
-/ - @companies.each do |crunchbase_company|
-/ - @crunchbase_companies.each do |crunchbase_company|
-/ -  @crunchbase_company = crunchbase_company
-/ 	.company
-/ 		.title
-/ 			%h3
-/ 				=link_to crunchbase_company["name"], 'company_path(crunchbase_company)'
-/ 		.block
-/ 			.logo
-/ 				= image_tag "http://www.crunchbase.com/company/#{crunchbase_company['name']}/#{crunchbase_company['image']}"
-/ 			.info
-/ 				.overview
-/ 					= crunchbase_company['overview']
-/ 				.info2
-/ 					%p= link_to 'Website', crunchbase_company['homepage_url'], {:target => "_blank"}
-/ 					%p= "Category: #{crunchbase_company['category_code']}"
-/ 				%p
-/ 					= link_to 'Edit', 'edit_company_path(crunchbase_company)'
-/ 					= link_to 'Delete', crunchbase_company, :confirm => 'Are you sure?', :method => :delete
+- @companies.each do |company|
+	.company
+		.title
+			%h3
+				=link_to company.name, 'company_path(company)'
+
+		.block
+			.logo
+				= image_tag "http://www.crunchbase.com/company/#{company['name']}/#{company['image']}"
+			.info
+				.overview
+					= company['overview']
+				.info2
+					%p= link_to 'Website', company['homepage_url'], {:target => "_blank"}
+					%p= "Category: #{company['category_code']}"
+				%p
+					= link_to 'Edit', 'edit_company_path(company)'
+					= link_to 'Delete', company, :confirm => 'Are you sure?', :method => :delete
 
 / ------- Inspecting Objects from CrunchBase API ------
 / %b
@@ -55,9 +42,9 @@
 / %p
 / 	= @crunchbase_companies[0].class
 / %b
-/ 	crunchbase_companies[0]: 
-/ %p
-/ 	= @crunchbase_companies[0]
+companies[0]: 
+%p
+	= @companies[0]
 / %b
 / 	json_file.inspect:
 / %p

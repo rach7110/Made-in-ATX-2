@@ -3,15 +3,10 @@ class CompaniesController < ApplicationController
   
   def index
   	@companies = Company.all
-
-    # Crunchbase API code - once it works, place it in model for cleaner code
-    # require 'crunchbase' 
-
   end
 
   def show
     @company = Company.find(params[:id])
-    json_file = JSON.parse(open("http://api.crunchbase.com/v/1/company/#{@name}.js"))
   end
 
   def new 

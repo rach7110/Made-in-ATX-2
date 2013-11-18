@@ -6,14 +6,6 @@ class Company < ActiveRecord::Base
 end
 
 
-
-# Updated model using Crunchbase API naming convention for attributes:
-# class Company < ActiveRecord::Base
-# 	attr_accessible :name, :category_code, :homepage_url, :overview, :image
-# 	validates_presence_of :name
-# end
-
-
 # Crunchbase API data format (the 'results' key is an array containing a hash for each company:
 # Example:
 # "name" => "Skylist"  (***)
