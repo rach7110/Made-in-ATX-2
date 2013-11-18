@@ -6,18 +6,7 @@ class CompaniesController < ApplicationController
 
     # Crunchbase API code - once it works, place it in model for cleaner code
     # require 'crunchbase' 
-    require 'open-uri'
-    require 'json'
 
-    # Crunchbase::API.key = "bxqwjskgyrg2hjykcrc6dbpy"
-    json_file = JSON.parse(open("http://api.crunchbase.com/v/1/search.js?geo=78701&range=15&page=1&api_key=bxqwjskgyrg2hjykcrc6dbpy").read)
-    @crunchbase_companies = json_file["results"]
-
-    #Iterate through object and instantiate class Company to store into the DB:
-    @crunchbase_companies.each do |crunchbase_company|
-      @company = Company.new(params[:company])
-      @company.update_attributes(:name => crunchbase_company["name"], :category_code => crunchbase_company["category_code"])  
-    end
   end
 
   def show
