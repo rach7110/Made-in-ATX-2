@@ -9,11 +9,13 @@ X -center append block
 X -category and website in right corner
 X - edit, delete --> add to line below category and website
 - add API data to DB 
-- Pull all pages from API
-- Company name links to view page
 - Edit & delete links work
--Fix 'Add a Company' button > Controller error when adding new company.
+- Pull all pages from API
 - make a relational db (exmaple: offices)
+- Company name links to view page
+
+-Fix 'Add a Company' button > Controller error when adding new company.
+
 -Authentication (see personas in Github)
 
 - expand all link

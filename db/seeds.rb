@@ -11,11 +11,11 @@
 
 #-------Crunchbase::API.key = "bxqwjskgyrg2hjykcrc6dbpy"
 json_file = JSON.parse(open("http://api.crunchbase.com/v/1/search.js?geo=78701&range=15&page=1&api_key=bxqwjskgyrg2hjykcrc6dbpy").read)
-@crunchbase_companies = json_file["results"]
+@crunchbase_companies = json_file["results"] 
 
 #-------Store API data into the DB:
 @crunchbase_companies.each do |crunchbase_company|
-	@company = Company.create(:name => crunchbase_company["name"], :category_code => crunchbase_company["category_code"])  
+	@company = Company.create(:name => crunchbase_company["name"], :category_code => crunchbase_company["category_code"], :homepage_url => crunchbase_company["homepage_url"], :overview => crunchbase_company["overview"], :image => crunchbase_company["image"])
 end
 
 

@@ -8,11 +8,13 @@
 	%a{:href => 'companies/new', :class => 'button'}
 		%img{:src=> 'assets/Button.13.Peter-c.jpg'}
 
+%p
+	companies[0]: 
+%p
+	= @companies[0]
+
 
 /  ---------  LISTING Companies from CrunchBase API ---------
-
-
-
 - @companies.each do |company|
 	.company
 		.title
@@ -24,9 +26,9 @@
 				= image_tag "http://www.crunchbase.com/company/#{company['name']}/#{company['image']}"
 			.info
 				.overview
-					= company['overview']
+					= company["overview"]
 				.info2
-					%p= link_to 'Website', company['homepage_url'], {:target => "_blank"}
+					%p= link_to 'Website', company["homepage_url"], {:target => "_blank"}
 					%p= "Category: #{company['category_code']}"
 				%p
 					= link_to 'Edit', 'edit_company_path(company)'
@@ -41,10 +43,7 @@
 / 	crunchbase_companies[0].class:
 / %p
 / 	= @crunchbase_companies[0].class
-/ %b
-companies[0]: 
-%p
-	= @companies[0]
+
 / %b
 / 	json_file.inspect:
 / %p
