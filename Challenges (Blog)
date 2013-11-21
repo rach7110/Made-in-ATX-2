@@ -1,0 +1,19 @@
+Challenges (Blog):
+
+Pulling data from an API and storing to the database - where's the best place for the code?
+**********************CODE:**********************
+require 'open-uri'
+require 'json'
+
+#-------Crunchbase::API.key = "bxqwjskgyrg2hjykcrc6dbpy"
+json_file = JSON.parse(open("http://api.crunchbase.com/v/1/search.js?geo=78701&range=15&page=1&api_key=bxqwjskgyrg2hjykcrc6dbpy").read)
+@crunchbase_companies = json_file["results"] 
+
+#-------Store API data into the DB:
+@crunchbase_companies.each do |crunchbase_company|
+	@company = Company.create(:name => crunchbase_company["name"], :category_code => crunchbase_company["category_code"], :homepage_url => crunchbase_company["homepage_url"], :overview => crunchbase_company["overview"], :image => crunchbase_company["image"])
+end
+*************************************************
+TRIALS/LESSONS LEARNED:
+Tried: 
+-Controller (place in the companies comtrolelr and index action) The root to (homepage) is set to companies#index. Ultimately, this slows down the app b/c each time the homepage is refreshed, it's pulling all the data from the API again. 
