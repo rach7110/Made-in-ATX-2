@@ -1,19 +1,32 @@
-Challenges (Blog):
+Challenges 
+(Blog):
 
+*******************CHALLENGE:***************************
 Pulling data from an API and storing to the database - where's the best place for the code?
-**********************CODE:**********************
+**************************CODE:*************************
 require 'open-uri'
 require 'json'
 
-#-------Crunchbase::API.key = "bxqwjskgyrg2hjykcrc6dbpy"
 json_file = JSON.parse(open("http://api.crunchbase.com/v/1/search.js?geo=78701&range=15&page=1&api_key=bxqwjskgyrg2hjykcrc6dbpy").read)
 @crunchbase_companies = json_file["results"] 
 
-#-------Store API data into the DB:
 @crunchbase_companies.each do |crunchbase_company|
 	@company = Company.create(:name => crunchbase_company["name"], :category_code => crunchbase_company["category_code"], :homepage_url => crunchbase_company["homepage_url"], :overview => crunchbase_company["overview"], :image => crunchbase_company["image"])
 end
-*************************************************
-TRIALS/LESSONS LEARNED:
-Tried: 
--Controller (place in the companies comtrolelr and index action) The root to (homepage) is set to companies#index. Ultimately, this slows down the app b/c each time the homepage is refreshed, it's pulling all the data from the API again. 
+***********************ATTEMPTS/LESSONS LEARNED**************************
+Attempt 1: 
+	Controller (placed in the companies controller under the index action) 
+Lesson Learned 1:
+	The root to: (homepage) is set to companies#index. Ultimately, this causes several issues:
+	1) It slows down the applicaiton b/c each time the homepage is refreshed, it's making a request to the API and pulling the data. 
+	2) Each time the index action is run, it is making new instances with the data from the API. So there will be repeats of the same data.
+
+Attempt 2:
+	Seed file
+Lesson Learned 2: 
+	The seed data has to be manually added to the database through the command line by running bundle exec rake db:seed. Also, The seed data will not be deployed Heroku (?)
+
+Attempt 3:
+	Model
+Lesson Learned 3: 
+	I'm not sure why it works properly (doesn't repeatedly store the data everytime the homepage is refreshed). But it works!
