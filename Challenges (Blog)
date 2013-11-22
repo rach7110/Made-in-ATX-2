@@ -29,4 +29,10 @@ Lesson Learned 2:
 Attempt 3:
 	Model
 Lesson Learned 3: 
-	I'm not sure why it works properly (doesn't repeatedly store the data everytime the homepage is refreshed). But it works!
+	It works in the model just like tin the controller. I'm not sure what the difference is. It was still pulling repeatedly, so I added a control statement using unless. 
+	Code:
+	unless @company.present? 
+		crunchbase_companies.each do |crunchbase_company|
+  			@company = Company.create(:name => crunchbase_company["name"], :category_code => crunchbase_company["category_code"], :homepage_url => crunchbase_company["homepage_url"], :overview => crunchbase_company["overview"], :image => crunchbase_company["image"])
+    	end
+ 	end
